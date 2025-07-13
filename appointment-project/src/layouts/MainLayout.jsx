@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import Calenderpage from "../componets/Calenderpage";
+import Calenderpage from "../components/Calenderpage";
 import { AppointmentContext } from "../context/AppointmentContext";
 import { IoIosTimer } from "react-icons/io";
 import { FaStethoscope } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import AppointmentForm from "../componets/AppointmentForm";
+import AppointmentForm from  "./components/AppointmentForm"
 
 function MainLayout() {
   const { appointments, setAppointments, clikedDate } =
