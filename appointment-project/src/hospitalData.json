@@ -1,0 +1,59 @@
+[
+  {
+    "doctor": {
+      "name": "Dr. John Smith",
+      "specialty": "Cardiology",
+      "contact": {
+        "phone": "555-123-4567",
+        "email": "john.smith@example.com"
+      }
+    },
+    "patient": {
+      "name": "Alice Johnson",
+      "age": 32,
+      "gender": "Female",
+      "medical_history": {
+        "conditions": ["Hypertension", "Diabetes"],
+        "allergies": ["Penicillin"]
+      }
+    }
+  },
+  {
+    "doctor": {
+      "name": "Dr. Emily Davis",
+      "specialty": "Oncology",
+      "contact": {
+        "phone": "555-987-6543",
+        "email": "emily.davis@example.com"
+      }
+    },
+    "patient": {
+      "name": "Bob Williams",
+      "age": 58,
+      "gender": "Male",
+      "medical_history": {
+        "conditions": ["Prostate Cancer"],
+        "allergies": []
+      }
+    }
+  },
+    {
+    "doctor": {
+      "name": "Dr. Michael Brown",
+      "specialty": "General Practitioner",
+       "contact": {
+        "phone": "555-555-5555",
+        "email": "michael.brown@example.com"
+      }
+    },
+    "patient": {
+      "name": "Sarah Lee",
+      "age": 27,
+      "gender": "Female",
+      "medical_history": {
+        "conditions": ["Asthma"],
+        "allergies": []
+      }
+    }
+  }
+]
