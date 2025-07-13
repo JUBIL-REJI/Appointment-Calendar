@@ -4,7 +4,7 @@ import { AppointmentContext } from "../context/AppointmentContext";
 import { IoIosTimer } from "react-icons/io";
 import { FaStethoscope } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
-import AppointmentForm from  "../components/AppointmentForm"
+import AppointmentForm from "../components/AppointmentForm";
 
 function MainLayout() {
   const { appointments, setAppointments, clikedDate } =
@@ -49,10 +49,9 @@ function MainLayout() {
 
   const visibleAppointments = showAll ? appointments : appointments.slice(0, 3);
 
-const filterBydayAppointments = clikedDate?.fullDate
-  ? appointments.filter((appt) => appt.date === clikedDate.fullDate)
-  : []; 
-
+  const filterBydayAppointments = clikedDate?.fullDate
+    ? appointments.filter((appt) => appt.date === clikedDate.fullDate)
+    : [];
 
   console.log(filterBydayAppointments);
   return (
@@ -123,7 +122,7 @@ const filterBydayAppointments = clikedDate?.fullDate
                   {showAll ? "Show Less" : "Show More"}
                 </button>
               </div>
-            )} 
+            )}
           </>
         ) : (
           <p className="text-center text-gray-500">

@@ -8,7 +8,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const MobileCalenderview = () => {
-  const { appointments, setAppointments, setPopup, popup } = useContext(AppointmentContext);
+  const { appointments, setAppointments, setPopup, popup } =
+    useContext(AppointmentContext);
   const [currentDay, setCurrentDay] = useState(dayjs());
   const [editingAppointment, setEditingAppointment] = useState(null);
   const [editingIndex, setEditingIndex] = useState(null);
@@ -20,7 +21,7 @@ const MobileCalenderview = () => {
   };
 
   const handleAddAppointment = () => {
-    setEditingAppointment(null); 
+    setEditingAppointment(null);
     setPopup(true);
   };
 
@@ -46,7 +47,6 @@ const MobileCalenderview = () => {
     localStorage.setItem("appointments", JSON.stringify(updated));
   };
 
-  // Optional: filter appointments for current day
   const appointmentsForCurrentDay = appointments.filter((appt) =>
     dayjs(appt.time).isSame(currentDay, "day")
   );
@@ -54,7 +54,6 @@ const MobileCalenderview = () => {
   return (
     <div>
       <div className="bg-gray-300 text-white w-full lg:w-1/3 p-6 relative overflow-hidden">
-        {/* Date Picker */}
         <DatePicker
           selected={currentDay.toDate()}
           onChange={(date) => setCurrentDay(dayjs(date))}
@@ -62,7 +61,6 @@ const MobileCalenderview = () => {
           dateFormat="dd MMM yyyy"
         />
 
-        {/* Scroll Buttons */}
         <div className="flex justify-between items-center mb-4">
           <button
             onClick={() => handleScroll("prev")}
@@ -79,7 +77,6 @@ const MobileCalenderview = () => {
           </button>
         </div>
 
-        {/* Date Display */}
         <div className="text-center font-bold text-[120px] leading-none">
           {currentDay.date()}
         </div>
@@ -90,7 +87,6 @@ const MobileCalenderview = () => {
         <div className="mt-8 text-sm font-medium">Add Appointments</div>
         <hr className="my-2 border-white/60" />
 
-        {/* Plus Button */}
         <button
           className="w-6 h-6 border-2 border-white rounded-full text-lg text-white hover:text-lime-400 hover:border-lime-400 flex items-center justify-center absolute right-6 bottom-6"
           onClick={handleAddAppointment}
@@ -99,7 +95,6 @@ const MobileCalenderview = () => {
         </button>
       </div>
 
-      {/* Appointment List */}
       <div className="mt-6">
         <div className="text-white font-semibold mb-2">Appointments</div>
         {appointmentsForCurrentDay.length > 0 ? (
@@ -116,7 +111,10 @@ const MobileCalenderview = () => {
                   🩺 <span className="ml-1">{appt.doctor}</span>
                 </p>
                 <p className="flex items-center text-sm text-gray-600">
-                  🕐 <span className="ml-1">{dayjs(appt.time).format("hh:mm A")}</span>
+                  🕐{" "}
+                  <span className="ml-1">
+                    {dayjs(appt.time).format("hh:mm A")}
+                  </span>
                 </p>
               </div>
 
@@ -141,7 +139,6 @@ const MobileCalenderview = () => {
         )}
       </div>
 
-      {/* Appointment Form */}
       {popup && (
         <AppointmentForm
           setPopup={setPopup}
