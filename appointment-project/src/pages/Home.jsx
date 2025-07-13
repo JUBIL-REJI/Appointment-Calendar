@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import MainLayout from "../layouts/MainLayout";
 import Footer from "../components/Footer";
 import CardsListing from "../components/CardsListing";
-import MobileCalenderview from "./components/MobileCalenderview";
+import MobileCalenderview from "../components/MobileCalenderview";
 
 function Home() {
   return (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdLightMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 import { FiAlignLeft } from "react-icons/fi";
-import Togglesidebar from "../componets/Togglesidebar";
+import Togglesidebar from "../components/Togglesidebar";
 
 const Navbar = () => {
   const [mode, setMode] = useState(false);
